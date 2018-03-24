@@ -11,6 +11,8 @@ export default function Breadcrumbs({ splat, type }) {
     base = `${ADMIN_PREFIX}/pages`;
   } else if (type == 'data files') {
     base = `${ADMIN_PREFIX}/datafiles`;
+  } else if (type == 'static files') {
+    base = `${ADMIN_PREFIX}/staticfiles`;
   } else if (type == 'drafts') {
     base = `${ADMIN_PREFIX}/drafts`;
   } else {
