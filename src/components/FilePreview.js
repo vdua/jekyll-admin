@@ -24,7 +24,7 @@ export default class FilePreview extends Component {
     );
 
     const nodeLink = onClick ? (
-      <a onClick={onClick.bind(null, file.http_url)}>{node}</a>
+      <a onClick={onClick.bind(null, file.http_url, file)}>{node}</a>
     ) : (
       <a href={file.http_url} target="_blank">
         {node}
