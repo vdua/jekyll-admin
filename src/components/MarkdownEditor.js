@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SimpleMDE from 'simplemde';
 import hljs from 'highlight.js';
 import Modal from 'react-modal';
-import FileChooser from '../containers/views/FileChooser.js';
+import FileChooser from '../containers/views/FileChooser';
 
 const classNames = [
   'editor-toolbar',
@@ -62,7 +62,7 @@ class MarkdownEditor extends Component {
     const { startPoint, endPoint } = this.state;
     const cm = this.editor.codemirror;
     cm.setSelection(startPoint, endPoint);
-    cm.replaceSelection(`[caption](${file.path})`);
+    cm.replaceSelection(`![caption](${file.path})`);
     this.setState({
       value: cm.getValue(),
     });
